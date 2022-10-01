@@ -91,7 +91,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.webp");
+    background: url("img/texture-paper.png");
     background-size: 280px 280px;
 }
 
@@ -294,21 +294,21 @@ a:hover {
 
 .navbar-brand {
     height: auto;
-    padding: 3px 15px;
+    padding: 3px 3px 3px 15px;
     font-size: 25px;
     font-weight: normal;
     font-weight: 600;
     line-height: 44px;
 }
 
-.navbar-brand img {
-    max-height: 200px;
+.navbar-brand img {   
     height: 40px;
+    width: 210px;
     margin: 0 5px 0 0;
     display: inline;
 }
 
-.navbar-brand img[src$=webp] {
+.navbar-brand img[src$=svg] {
     min-width: 100px;
 }
 
@@ -518,6 +518,10 @@ button {
     box-shadow: none;
 }
 
+.position-relative {
+    position: relative;
+}
+
 .scrollToTop {
     width: 40px;
     height: 40px;
@@ -562,7 +566,7 @@ a[data-lightbox]:hover::before {
     transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
@@ -751,6 +755,16 @@ h4 {
     margin-bottom: 24px;
 }
 
+.size-image {
+    height: 270px;
+    width: 100%;
+}
+
+.image-resize-mode {
+    width: 100px;
+    height: 100px;
+}
+
 .portfolio-row {
     margin-bottom: 44px;
     margin-top: 50px;
@@ -818,19 +832,24 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.webp");
+    background-image: url("img/dots-bg.png");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.webp");
+    background-image: url("img/lines-h2-bg.png");
 }
 
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.webp");
+    background-image: url("img/agence-la-panthere.jpeg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.webp");
+    background-image: url("img/image-de-presentation.jpeg");
+}
+
+.position {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -987,10 +1006,6 @@ h4 {
         box-shadow: none;
     }
 
-    .navbar-brand img {
-        max-height: 40px;
-        width: auto;
-    }
 
     .nav-invert .navbar-header {
         float: none;
@@ -1066,6 +1081,9 @@ h4 {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+    .size-image {
+       height: 100%;
     }
 }
 
